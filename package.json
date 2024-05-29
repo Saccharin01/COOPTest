@@ -1,0 +1,11 @@
+{
+  "name": "cooptest",
+  "version": "1.0.0",
+  "description": "\"협업 상황에 대한 상황 설정 및 테스팅 환경\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "\"구하림\", \"유으뜸\", \"조자연\", \"조우식\"",
+  "license": "MIT"
+}
