@@ -7,5 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "\"구하림\", \"유으뜸\", \"조자연\", \"조우식\"",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "xhr2": "^0.2.1"
+  }
 }
