@@ -1,7 +1,7 @@
 // * 해당 함수는 유효성 검사를 염두하고 제작된 함수입니다.
 // * 회원가입에 사용될 아이디가 영어와 숫자만을 사용할때의 경우를 가정하여 만든 함수입니다.
 
-function checkValue(input,standard){
+export function checkValue(input,standard){
   // * logic : 입력된 값과 지정된 다른 값을 비교하는 함수입니다.
   // * logic : 같을 경우에는 통과 같지 않을 경우에는 생성이 안되게 하고자 합니다.
   if (input.value === standard) {
