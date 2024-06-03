@@ -10,3 +10,5 @@ const calculate = {
     return a - b;
   }
 };
+
+export { calculate };
