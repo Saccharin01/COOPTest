@@ -2,7 +2,7 @@
 // * id가 문자열이 아닐경우는 error를 띄워서 멈추게 하였습니다.
 
 
-export class makeObject {
+class makeObject {
   // * logic : id와 password를 매개변수를 받아서 객체를 생성합니다.
   // * logic : set을 사용하여 id에는 문자열만을 받도록 하였습니다.
   constructor (id,password) {
@@ -19,3 +19,5 @@ export class makeObject {
   }
 }
 
+let test = new makeObject(`asdasd0112`,12121212)
+console.log(test)
