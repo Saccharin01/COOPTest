@@ -9,13 +9,17 @@
   <body>
     <div id="root">
       <h1>회원가입</h1>
-      <div id="container">
-        <label for="userID">ID</label>
-        <input type="text" placeholder="아이디를 입력하세요." />
-        <label for="userpw">password</label>
-        <input type="password" placeholder="비밀번호를 입력하세요." />
-        <input type="submit" value="sign in" />
-      </div>
+      <form action="">
+        <div>
+          <label for="id">아이디</label>
+          <input type="text" id="user_id" name="id" title="id" />
+        </div>
+        <div>
+          <label for="pw"></label>
+          <input type="password" id="user_pw" name="pw" title="pw" />
+        </div>
+        <button type="submit" id="btn" title="button"></button>
+      </form>
     </div>
   </body>
 </html>
