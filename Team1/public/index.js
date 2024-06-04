@@ -1,7 +1,5 @@
 // * 초기화 된 변수 배열에 데이터가 추가 될 곳
 // * 계속 추가 될 수 있는 부분 / 임시로 하나만 설정
-import {appearBtn} from './module/module_appearSendBtn.js'
-console.log(appearBtn)
 const user = [
   { userID : "user1", userPW : "pass123" }
 ];
