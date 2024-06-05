@@ -1,4 +1,4 @@
-const makeObject = require('./module_createObject');
+import { makeObject } from "./module_createObject.js";
 
 let test = new makeObject('가나다','가나다1');
 
