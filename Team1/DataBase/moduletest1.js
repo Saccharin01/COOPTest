@@ -9,9 +9,13 @@ console.log(a);
 // console.log(b);
 
 import {test1 , add2} from "./testfunction1.js"
+import * as from "./testfunction1.js"
 import {add} from "./testfunction2.js"
 
 let b = new test1(1, "testsetset")
 let b2 = new test1("qwewqe", "testsetset")
 console.log(b);
 console.log(b2);
+
+let c = add2(3,4);
+console.log(c);
