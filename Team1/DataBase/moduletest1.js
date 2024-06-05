@@ -4,6 +4,8 @@ import {makeObject} from "../public/module/module_createObject.js"
 let a = new makeObject("ㅁㄴㅇㄴㅁㅇ","ㄴㅁㅇㄴㅁ");
 console.log(a);
 
-import {appearBtn} from "../public/module/module_appearSendBtn.js"
-let b = appearBtn("a","s","d");
-console.log(b);
+// import {appearBtn} from "../public/module/module_appearSendBtn.js"
+// let b = appearBtn("a","s","d");
+// console.log(b);
+
+
