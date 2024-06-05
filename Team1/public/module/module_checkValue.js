@@ -13,6 +13,7 @@ export function checkValue(input1,input2,standard){
   }
 }
 
+
 // * 다만 해당 함수는 조건을 추가한다면의 이야기이기에 일단은 틀만 잡아둡니다.
 // * 만약 정규식을 standard로 사용하고자 하신다면, 함수의 조건문을 수정해야 합니다. 
 /*
