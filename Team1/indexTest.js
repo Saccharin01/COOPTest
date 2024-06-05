@@ -37,7 +37,9 @@ console.log(button);
 //     console.error("아이디나 비밀번호를 입력해주세요.");
 //   }
 // });
-button.addEventListener("click", () => {
+button.addEventListener("click", () => { // ! 버튼에 이벤트를 부여했으나. 해당 요소가 html에서 보이지 않음
+
+
   const userIDInput = document.getElementById("user_id");
   const userPWInput = document.getElementById("user_pw");
   const userID = userIDInput.value;
