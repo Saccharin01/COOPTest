@@ -6,8 +6,8 @@ export class test1 {
     this.a = a,
     this.b = b
   }
-  set(value){
-    if(value === "number"){
+  set a(value){
+    if(typeof(value) === "number"){
       this._a = value;
     }else{
       console.log("숫자넣어줘");
