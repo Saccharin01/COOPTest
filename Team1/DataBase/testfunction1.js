@@ -8,9 +8,9 @@ export class test1 {
   }
   set(value){
     if(value === "number"){
-      this._id = value;
+      this._a = value;
     }else{
-      console.log("숫자 말고 다른 것 넣어주세요");
+      console.log("숫자넣어줘");
     }
   }
 }
