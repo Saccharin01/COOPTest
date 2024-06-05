@@ -15,7 +15,7 @@ export class test1 {
   }
 }
 
-export function add2(a,b) {
+export function test2(a,b) {
   return a*b;
 };
 
