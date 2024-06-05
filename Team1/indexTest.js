@@ -16,11 +16,33 @@ console.log(button);
 // * 잡혀있는 form 태그 자체에 이벤트 리스너를 걸어주고 이벤트 자체를 submit을 적용한다.
 // * 그 이후 action 속성에 /submit으로 지정해주고 method 속성에 POST 방식으로 지정해준 후 endpoint를
 // * /submit으로 설정해주고 나머지는 chunk 단위로 데이터를 받아오고 JSON 구문을 파악한 후 파싱하든 모듈을 불러와서 qs 방식으로 하든 그건 취향껏 결정하면 되는 부분인것 같습니다. 
+
+// button.addEventListener("click", () => {
+//   const userIDInput = document.getElementById("user_id");
+//   const userPWInput = document.getElementById("user_pw");
+//   const userID = userIDInput.value;
+//   const userPW = userPWInput.value;
+
+
+//   if (userID !== "" && userPW !== "") {
+
+//     user.push({ userID, userPW });
+//     console.log("회원가입이 가능한 아이디와 비밀번호입니다.");
+//     console.log("현재 사용자 데이터:", user);
+
+//     userIDInput.value = "";
+//     userPWInput.value = "";
+//   } 
+//   else {
+//     console.error("아이디나 비밀번호를 입력해주세요.");
+//   }
+// });
 button.addEventListener("click", () => {
   const userIDInput = document.getElementById("user_id");
   const userPWInput = document.getElementById("user_pw");
   const userID = userIDInput.value;
   const userPW = userPWInput.value;
+
 
   if (userID !== "" && userPW !== "") {
 
@@ -35,5 +57,4 @@ button.addEventListener("click", () => {
     console.error("아이디나 비밀번호를 입력해주세요.");
   }
 });
-
 console.log("초기화된 데이터", user);
