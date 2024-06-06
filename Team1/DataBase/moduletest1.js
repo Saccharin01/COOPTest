@@ -15,8 +15,11 @@ import * as test from "./testfunction1.js"
 
 console.log(test)
 console.dir(test)
-console.log(test.test1)
-console.dir(test.test1)
+console.dir(test.func.test1)
+
+
+
+
 
 // * testfunction1에 함수 불러오기
 // let b = new test1(1, "testsetset")
@@ -28,7 +31,7 @@ console.dir(test.test1)
 // console.log(c);
 
 //* as 사용부분
-// let b3 = new test.test1(1, "testsetset")
-// console.log(b3);
+let b3 = new test.func.test1(1, "testsetset")
+console.log(b3);
 
 
