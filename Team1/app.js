@@ -8,7 +8,7 @@ let server = http.createServer((req, res)=>{
   if(req.method ===`GET`){
     //console.log(req.url)
     if(req.url === `/`){
-      fs.readFile(`public/html/index.html`, 'utf-8', (err, data)=>{
+      fs.readFile('./public/html/index.html', 'utf-8', (err, data)=>{
         if(err){
           fs.mkdir(`public`, (err)=>{
             if(err){
@@ -37,8 +37,8 @@ let server = http.createServer((req, res)=>{
         }
       })
     }
-    else if(req.url.startsWith(`/core`)){
-      fs.readFile(`public/core.js`, (err, data)=>{
+    else if(req.url.startsWith(`/style`)){
+      fs.readFile(``, (err, data)=>{
         if(err){
           //console.log(`readFile error : ${err}`);
         }else{
