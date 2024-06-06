@@ -1,5 +1,5 @@
 //import테스트를 위한 export 함수만들기
-const func = {
+export const func = {
   
   test1 : function(){
 
