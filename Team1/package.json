@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "\"협업 상황에 대한 상황 설정 및 테스팅 환경\"",
   "main": "app.js",
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
