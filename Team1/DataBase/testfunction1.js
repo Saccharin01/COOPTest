@@ -1,7 +1,7 @@
 //import테스트를 위한 export 함수만들기
 export const func = {
   
-  test1 : function(){
+  'test1' : function(){
 
     class test1 {
       constructor(a,b) {
@@ -18,7 +18,7 @@ export const func = {
     }
   },
 
-  test2 : 
+  'test2' : 
     function test2(a,b) {
      return a*b;
   }
