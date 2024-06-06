@@ -1,9 +1,7 @@
 //import테스트를 위한 export 함수만들기
 export const func = {
   
-  'test1' : function(){
-
-    class test1 {
+  'test1' :  class test1 {
       constructor(a,b) {
         this.a = a,
         this.b = b
@@ -15,7 +13,6 @@ export const func = {
           console.log("숫자넣어줘");
         }
       }
-    }
   },
 
   'test2' : 
