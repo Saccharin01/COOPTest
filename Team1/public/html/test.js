@@ -1,0 +1,1 @@
+console.log('test용 js생성');
