@@ -3,6 +3,15 @@
   padding: 0;
 }
 
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 200px;
+}
+
 #root {
   width: 600px;
   height: 400px;
