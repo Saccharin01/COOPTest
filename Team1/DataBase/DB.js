@@ -1,4 +1,8 @@
-console.log("테스트입니다.")
+// 생각 - 우선 필요한 require 할 것
+  // fs , http 
+// 우선 내가 아는 방식으로 받아보자
+  // 우선은 method가 post방식으로 들어왔을 때 url이 submit이면 json으로 저장되는 것 먼저 구성한다.
+// 헤보고 테스트 하면서 facth로 해보자
 
-// 내가 모르고 있는 DB의 이해를 위해 팀장님이 우선 모듈에 대한 이해도를 먼저 이해하는 것을 요청받았다.
-// 단위테스트 및 검증을 실시 브랜치 moduleTest 생성
+const http = require("http")
+const fs = require("fs")
