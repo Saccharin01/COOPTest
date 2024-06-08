@@ -2,3 +2,61 @@
   margin: 0;
   padding: 0;
 }
+
+/* window 에서 스크롤 없애주기 위해 100vh,100vw 아닌 90vw, 70vh로 수정 */
+body {
+  width: 90vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin-top: 200px;
+  background-color: #b9d0db;
+}
+
+#root {
+  width: 600px;
+  height: 400px;
+  background-color: #8e95a7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  background-color: #8e95a7;
+  box-shadow: 20px 15px #495057;
+}
+
+form {
+  width: 350px;
+  height: 350px;
+  background-color: #d8dee9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* input과 label 의 부모인 div class= item */
+.item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+input {
+  width: 200px;
+  height: 30px;
+}
+#btn {
+  width: 100px;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #81a1c1;
+  font-size: 20px;
+  /* visibility: hidden; */
+}
+#btn:hover {
+  background-color: white;
+  font-weight: 600;
+}
