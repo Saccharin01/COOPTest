@@ -3,6 +3,7 @@
   padding: 0;
 }
 
+/* window 에서 스크롤 없애주기 위해 100vh,100vw 아닌 90vw, 70vh로 수정 */
 body {
   width: 90vw;
   height: 70vh;
@@ -24,6 +25,7 @@ body {
   background-color: #8e95a7;
   box-shadow: 20px 15px #495057;
 }
+
 form {
   width: 350px;
   height: 350px;
@@ -35,6 +37,7 @@ form {
   gap: 20px;
 }
 
+/* input과 label 의 부모인 div class= item */
 .item {
   display: flex;
   justify-content: center;
