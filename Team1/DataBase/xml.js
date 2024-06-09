@@ -12,15 +12,21 @@ const xml = new XMLHttpRequest();
 let server = http.createServer((req, res)=>{
   if(req.method ===`GET`){
     if(req.url === `/`){ 
+      // app.js에 적용한다면 적용할 부분
       xml.open('GET', 'http://localhost:8081/datajson.json', ture);
+      //아래 부분은 잘은 모르지만 찾아서 작성하였고 js에 이벤트 리스너에 Readystatechange이벤트 하는 것과 비슷해 보임
       xml.onreadystatechange  = ()=>{
-        if (xhr.readyState === 4 && xml.status === 200) {
+        if (xml.status === 200) {
           let jData = JSON.parse(xml.responseText);
           console.log(jData);
           console.dir(jData);
+          //만약 html로 할거면 써볼만한 부분  
+          // res.writeHead(200, { "Content-Type": 'text/html'});
+          // res.end(`<p>${data.id}</p>`);
         }
       };
       xml.send()
+    //적용할 부분 끝 
     }
   }
 });
