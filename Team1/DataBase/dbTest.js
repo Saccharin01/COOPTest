@@ -8,6 +8,8 @@ const http = require("http")
 const fs = require("fs")
 
 const server = http.createServer((req, res) => {
+  console.log(req.method)
+  console.log(req.url)
   if(req.method === "POST"){
     console.log('testing')
     console.log(req.url)
