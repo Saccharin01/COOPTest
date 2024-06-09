@@ -2,7 +2,7 @@
 //아직 xml이나 DB에 익숙하지않아 -> 강사님의 코드를 보고 변경하여 만들어본 것입니다. + 찾은 부분 추가
 // 그래서 작동하는지 테스트는 하지 못하였음을 알려드립니다.
 
-
+//!테스트를 하지 못해서 완성이라고 말하기는 어렵다.
 const http = require(`http`);
 const XMLHttpRequest = require(`xhr2`);
 const xml = new XMLHttpRequest();
