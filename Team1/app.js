@@ -19,7 +19,7 @@ let server = http.createServer((req, res)=>{
           res.end()
         }
       })
-    }else if(req.url.startsWith('/style')){
+    }else if(req.url==='/style.css'){
       // console.log('tracking')
       fs.readFile('./team1/public/html/style.css', (err,data)=>{
         if(err){
