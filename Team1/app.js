@@ -9,7 +9,7 @@ let server = http.createServer((req, res)=>{
   console.log(req.url)
   if(req.method === 'GET'){
     if(req.url==='/'){
-      fs.readFile('./team1/public/html/test.html', 'utf-8', (err,data)=>{
+      fs.readFile('./public/html/test.html', 'utf-8', (err,data)=>{
         if(err){
           console.log(`err occur : ${err}`)
         }else{
@@ -21,7 +21,7 @@ let server = http.createServer((req, res)=>{
       })
     }else if(req.url==='/style.css'){
       // console.log('tracking')
-      fs.readFile('./team1/public/html/style.css', (err,data)=>{
+      fs.readFile('./public/html/style.css', (err,data)=>{
         if(err){
           console.log(`err occur : ${err}`)
         }else{
@@ -32,7 +32,7 @@ let server = http.createServer((req, res)=>{
         }
       })
     }else if(req.url === '/index.js'){
-      fs.readFile('./team1/public/index.js', 'utf-8', (err,data)=>{
+      fs.readFile('./public/index.js', 'utf-8', (err,data)=>{
         if(err){
           console.log(`err occur : ${err}`)
         }else{
@@ -42,7 +42,7 @@ let server = http.createServer((req, res)=>{
         }
       })
     }else if(req.url === '/favicon.ico'){
-      fs.readFile('./team1/public/html/favicon.ico', (err,data)=>{
+      fs.readFile('./public/html/favicon.ico', (err,data)=>{
         if(err){
           console.log(`error occur : ${err}`)
         }else {
