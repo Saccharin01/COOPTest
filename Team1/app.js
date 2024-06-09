@@ -41,6 +41,16 @@ let server = http.createServer((req, res)=>{
           res.end()
         }
       })
+    }else if(req.url === '/favicon.ico'){
+      fs.readFile('./team1/public/html/favicon.ico', (err,data)=>{
+        if(err){
+          console.log(`error occur : ${err}`)
+        }else {
+          res.writeHead(200, {'content-Type': 'image/ico'})
+          res.write(data)
+          res.end()
+        }
+      })
     }
   }
 })
