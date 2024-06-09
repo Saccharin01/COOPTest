@@ -31,6 +31,16 @@ let server = http.createServer((req, res)=>{
           res.end()
         }
       })
+    }else if(req.url === '/index.js'){
+      fs.readFile('./team1/public/index.js', 'utf-8', (err,data)=>{
+        if(err){
+          console.log(`err occur : ${err}`)
+        }else{
+          res.writeHead(200, {'content-Type':'Application/javaScript'})
+          res.write(data)
+          res.end()
+        }
+      })
     }
   }
 })
