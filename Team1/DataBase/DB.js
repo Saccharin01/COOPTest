@@ -1,8 +1,8 @@
-// 생각 - 우선 필요한 require 할 것
-  // fs , http 
-// 우선 내가 아는 방식으로 받아보자
-  // 우선은 method가 post방식으로 들어왔을 때 url이 submit이면 json으로 저장되는 것 먼저 구성한다.
-// 헤보고 테스트 하면서 facth로 해보자
+// 우선 필요한 require 할 것
+// fs , http 
+// 우선 내가 아는 방식으로 만들기 시작
+//json으로 저장한 후 xml이나 fetch 사용해보자.
+//xml방식으로 하는게 맞지 않을까 생각
 
 const http = require("http")
 const fs = require("fs")
@@ -10,14 +10,6 @@ const fs = require("fs")
 const server = http.createServer((req, res) => {
   if(req.method === "POST"){
     if(req.url === "/submit"){
-      fs.readFile('./public/html/index.html', 'utf-8', (err, data)=>{
-        if(err){
-          console.log("errr");
-        }else{
-          res.writeHead(200, {'content-Type': 'text/html'})
-          res.write(data)
-        }
-      });
       let body = '';
       req.on("data", chunk => {
         body += chunk.toString();
@@ -34,10 +26,20 @@ const server = http.createServer((req, res) => {
         const jsondata = JSON.stringify(json);
         fs.writeFile("database.json",jsondata, (err)=>{
           if (err) {
-            res.end('오류');
+            res.writeHead(500)
+            res.end('json 작성 오류');
+            return;
           }
-          res.writeHead(200, {'Content-Type': 'application/json'});
-          res.end(jsondata);
+          fs.readFile('./public/html/index.html', 'utf-8', (err, data)=>{
+            if(err){
+              res.writeHead(500)
+              res.end("submit후 html읽기");
+              return;
+            }else{
+              res.writeHead(200, {'content-Type': 'text/html'})
+              res.end(data);
+            }
+          });
         })
       })
 
