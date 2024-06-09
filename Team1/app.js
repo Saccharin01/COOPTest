@@ -16,8 +16,6 @@ let server = http.createServer((req, res)=>{
           // console.log(data)
           res.writeHead(200, {'content-Type': 'text.html'});
           res.write(data);
-          res.end()
-
         }
       })
     }else if(req.url.startsWith('/style')){
@@ -27,7 +25,7 @@ let server = http.createServer((req, res)=>{
           console.log(`err occur : ${err}`)
         }else{
           console.log(data)
-          res.writeHead(200, {'content-Type': 'application/css'})
+          res.writeHead(200, {'content-Type': 'text/css'})
           res.end(data)
         }
       })
