@@ -33,10 +33,11 @@ const server = http.createServer((req, res) => {
             res.end('json 작성 오류');
             return;
           }
-          fs.readFile('./public/html/index.html', 'utf-8', (err, data)=>{
+          fs.readFile('../public/html/test.html', 'utf-8', (err, data)=>{
             if(err){
               res.writeHead(500)
               res.end("submit and html");
+              
               return;
             }else{
               res.writeHead(200, {'content-Type': 'text/html'})
