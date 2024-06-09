@@ -11,10 +11,11 @@ const server = http.createServer((req, res) => {
   console.log(req.method)
   console.log(req.url)
   if(req.method === "POST"){
-    if(req.url === "/submit"){
+    if(req.url === "/"){
       let body = '';
       req.on("data", chunk => {
         body += chunk.toString();
+        console.log(body)
         });
       req.on("end", () => {
         const parseData = new URLSearchParams(body);
@@ -35,7 +36,7 @@ const server = http.createServer((req, res) => {
           fs.readFile('./public/html/index.html', 'utf-8', (err, data)=>{
             if(err){
               res.writeHead(500)
-              res.end("submit후 html읽기");
+              res.end("submit and html");
               return;
             }else{
               res.writeHead(200, {'content-Type': 'text/html'})
