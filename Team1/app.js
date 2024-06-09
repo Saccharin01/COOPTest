@@ -5,9 +5,9 @@ const fs = require(`fs`)
 
 
 let server = http.createServer((req, res)=>{
+  console.log(req.method)
+  console.log(req.url)
   if(req.method === 'GET'){
-    console.log(req.method)
-    console.log(req.url)
     if(req.url==='/'){
       fs.readFile('./team1/public/html/test.html', 'utf-8', (err,data)=>{
         if(err){
