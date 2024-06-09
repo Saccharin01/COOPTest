@@ -16,17 +16,19 @@ let server = http.createServer((req, res)=>{
           // console.log(data)
           res.writeHead(200, {'content-Type': 'text.html'});
           res.write(data);
+          res.end()
         }
       })
     }else if(req.url.startsWith('/style')){
-      console.log('tracking')
+      // console.log('tracking')
       fs.readFile('./team1/public/html/style.css', (err,data)=>{
         if(err){
           console.log(`err occur : ${err}`)
         }else{
-          console.log(data)
+          // console.log(data)
           res.writeHead(200, {'content-Type': 'text/css'})
-          res.end(data)
+          res.write(data)
+          res.end()
         }
       })
     }
