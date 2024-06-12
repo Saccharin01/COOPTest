@@ -31,7 +31,7 @@ const server = http.createServer((req, res) => {
         res.end();
         return;
       }
-      res.writeHead(200, { "Content-Type": "application/script" });
+      res.writeHead(200, { "Content-Type": "application/Javascript" });
       res.end(data);
     });
   } else if (req.url === "/favicon.ico") {
