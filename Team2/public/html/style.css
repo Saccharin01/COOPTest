@@ -5,12 +5,11 @@
 
 /* window 에서 스크롤 없애주기 위해 100vh,100vw 아닌 90vw, 70vh로 수정 */
 body {
-  width: 90vw;
-  height: 70vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-self: center;
-  margin-top: 200px;
+  align-items: center;
   background-color: #b9d0db;
 }
 
