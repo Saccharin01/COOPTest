@@ -44,5 +44,15 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "img/ico" });
       res.end(data);
     });
+  } else if (req.url === "/unclePizza.jpg") {
+    fs.readFile("./public/html/unclePizza.jpg", "utf-8", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        res.end();
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "img/jpg" });
+      res.end(data);
+    });
   }
 });
