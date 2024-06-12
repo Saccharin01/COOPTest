@@ -26,4 +26,15 @@ const server = http.createServer((req, res) => {
       res.end(data);
     });
   }
+  else if(req.url === "/Script.js"){
+    fs.readFile("./public/html/Script.js", "utf-8", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        res.end();
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "application/script" });
+      res.end(data);
+    });
+  }
 });
