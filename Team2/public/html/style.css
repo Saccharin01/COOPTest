@@ -89,6 +89,11 @@ body {
   cursor: pointer;
 }
 
+#welcomeSubmit > div:nth-child(2) > div:nth-child(3) > button:hover {
+  background-color: skyblue;
+  color: white;
+}
+
 form {
   width: 350px;
   height: 350px;
