@@ -56,3 +56,9 @@ const server = http.createServer((req, res) => {
     });
   }
 });
+
+const PORT = 8080;
+server.listen(PORT, () => {
+  console.log("서버 가동");
+  console.log(`http://localhost:${PORT}`);
+});
