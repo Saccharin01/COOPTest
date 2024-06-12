@@ -5,12 +5,11 @@
 
 /* window 에서 스크롤 없애주기 위해 100vh,100vw 아닌 90vw, 70vh로 수정 */
 body {
-  width: 90vw;
-  height: 70vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
-  align-self: center;
-  margin-top: 200px;
+  align-items: center;
   background-color: #b9d0db;
 }
 
@@ -24,6 +23,75 @@ body {
   gap: 30px;
   background-color: #8e95a7;
   box-shadow: 20px 15px #495057;
+}
+
+#partition {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  z-index: 2;
+  visibility: visible;
+}
+
+#welcomeSubmit {
+  position: absolute;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 700px;
+  box-sizing: border-box;
+  background-color: whitesmoke;
+  padding: 0px 20px;
+  gap: 10px;
+  visibility: visible;
+}
+
+#welcomeSubmit > div:nth-child(1) {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcomeSubmit > div:nth-child(1) > img {
+  height: 100%;
+  object-fit: fill;
+}
+
+#welcomeSubmit > div:nth-child(2) {
+  width: 560px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+#welcomeSubmit > div:nth-child(2) > div:nth-child(3) {
+  display: flex;  
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 50px;
+}
+
+#welcomeSubmit > div:nth-child(2) > div:nth-child(3) > button {
+  width: 90px;
+  height: 40px;
+  font-size: 14px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+#welcomeSubmit > div:nth-child(2) > div:nth-child(3) > button:hover {
+  background-color: skyblue;
+  color: white;
 }
 
 form {
