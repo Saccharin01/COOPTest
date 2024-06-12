@@ -5,7 +5,7 @@ console.log(fs);
 
 const server = http.createServer((req, res) => {
   if (req.method === "GET" && req.url === "/") {
-    fs.readFile(path.join(__dirname, "index.html"), (err, data) => {
+    fs.readFile("./public/html/index.html", "utf-8", (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
         res.end();
