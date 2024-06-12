@@ -30,7 +30,8 @@ body {
   width: 100vw;
   background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
-  z-index: 2
+  z-index: 2;
+  visibility: visible;
 }
 
 #welcomeSubmit {
@@ -46,8 +47,21 @@ body {
   background-color: whitesmoke;
   padding: 0px 20px;
   gap: 10px;
+  visibility: visible;
 }
 
+#welcomeSubmit > div:nth-child(1) {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#welcomeSubmit > div:nth-child(1) > img {
+  height: 100%;
+  object-fit: fill;
+}
 
 form {
   width: 350px;
