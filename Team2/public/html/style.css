@@ -115,8 +115,9 @@ form {
 
 /* input과 label 의 부모인 div class= item */
 .item {
+  width: 500px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-direction: row;
   font-size: 22px;
@@ -128,6 +129,7 @@ form {
 }
 input {
   width: 240px;
+  margin-right: 60px;
   height: 45px;
   font-size: 22px;
 }
