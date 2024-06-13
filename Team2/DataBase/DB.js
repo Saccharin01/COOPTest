@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
   console.log(req.method)
   console.log(req.url)
   if(req.method === "POST"){
-    if(req.url === "/submit"){ // ! checked
+    if(req.url === "/"){ // ! checked
       req.on("data", chunk => {
         let container = [];
       
