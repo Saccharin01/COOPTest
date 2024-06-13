@@ -8,7 +8,7 @@ function welcomeHidden() {
       });
     } else if (button.textContent === "난치킨파야!") {
       button.addEventListener("click", function () {
-        button.style.visibility = "hidden";
+        button.style.display = "none";
       });
     }
   });
