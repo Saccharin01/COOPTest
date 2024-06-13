@@ -15,6 +15,8 @@ function welcomeHidden() {
 }
 welcomeHidden();
 
+// 비밀번호와 비밀번호 확인  유효성검사
+
 // 각 요소 가져오기
 const userId = document.getElementById("user_id");
 const userPw = document.getElementById("user_pw");
@@ -27,9 +29,15 @@ console.log(root);
 // 입력 값이 변경될 때마다 실행될 핸들러
 function checkInputs() {
   if (userId.value && userPw.value && userPwCheck.value) {
-    submitBtn.style.display = "block";
+    if (userPw.value === userPwCheck.value) {
+      submitBtn.style.display = "block";
+      document.getElementById("user_pw-check").style.borderColor = "black";
+    }
   } else {
     submitBtn.style.display = "none";
+    if (userPw.value !== userPwCheck.value) {
+      document.getElementById("user_pw-check").style.borderColor = "red";
+    }
   }
 }
 
