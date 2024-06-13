@@ -52,9 +52,14 @@ const server = http.createServer((req, res) => {
             fs.writeFile(`parseData.json`, JSON.stringify(origindata, null, 2), (err)=>{
               if(err){
                 console.log(err)
+                res.statusCode = 500
+                res.end()
               }else{
                 console.log(`Process Tracking`)
+                res.statusCode = 200
+                res.end()
               }
+              console.log(res.url)
             })
           }
         })
@@ -89,6 +94,7 @@ const server = http.createServer((req, res) => {
       //   })
       // })
     }
+    console.log(res.url)
   }
 });
 
