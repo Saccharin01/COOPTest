@@ -57,9 +57,9 @@ const server = http.createServer((req, res) => {
               }else{
                 console.log(`Process Tracking`)
                 res.statusCode = 200
+                console.log(res.end())
                 res.end()
               }
-              console.log(res.url)
             })
           }
         })
