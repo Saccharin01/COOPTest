@@ -1,3 +1,20 @@
+// 가입하세요! 라는 버튼을 클릭하면 , partition , welcomeSubmit 를 hidden
+function welcomeHidden() {
+  document.querySelectorAll("button").forEach((button) => {
+    if (button.textContent === "가입하세요!") {
+      button.addEventListener("click", function () {
+        document.getElementById("partition").style.visibility = "hidden";
+        document.getElementById("welcomeSubmit").style.visibility = "hidden";
+      });
+    } else if (button.textContent === "난치킨파야!") {
+      button.addEventListener("click", function () {
+        button.style.visibility = "hidden";
+      });
+    }
+  });
+}
+welcomeHidden();
+
 // 각 요소 가져오기
 const userId = document.getElementById("user_id");
 const userPw = document.getElementById("user_pw");
