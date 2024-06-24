@@ -45,7 +45,7 @@ const server = http.createServer((req, res) => {
       res.end(data);
     });
   } else if (req.url === "/unclePizza.jpg") {
-    fs.readFile("./public/html/unclePizza.jpg", "utf-8", (err, data) => {
+    fs.readFile("./public/html/unclePizza.jpg", (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
         res.end();
