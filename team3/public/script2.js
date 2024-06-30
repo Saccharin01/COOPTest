@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
       mainButton.style.display = 'block';
       setTimeout(() => {
           mainButton.style.opacity = '1';
-      }, 0);
+      }, 3000);
   });
 
   // '메인으로 돌아가기' 버튼 클릭 시 index.html로 이동
