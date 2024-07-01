@@ -8,7 +8,7 @@ height: 90vh;
 }
 #root {
 position: relative;
-background-image: url(../resource/background.png);
+background-image: url(./background.jpg);
 /* border: 2px solid red; */
 width: 100vw;
 height: 100vh;
@@ -18,7 +18,7 @@ background-color: black;
 .fontA {
 position: absolute;
 color: white;
-left: 20%;
+left: 10%;
 top: 15%;
 font-size: 1.5rem;
 background-color: rgba(95, 95, 95, 0.8);
@@ -26,10 +26,12 @@ background-color: rgba(95, 95, 95, 0.8);
 .fontB {
 position: absolute;
 color: white;
-left: 20%;
+left: 10%;
 top: 40%;
 font-weight: bold;
 font-size: 24px;
+width: 75%;
+display: flex;
 background-color: rgba(95, 95, 95, 0.8);
 }
 
