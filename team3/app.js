@@ -85,8 +85,8 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "text/css" });
       res.end(data);
     });
-  } else if (req.url === "/Script2.js") {
-    fs.readFile("./public/Script2.js", "utf-8", (err, data) => {
+  } else if (req.url === "/script2.js") {
+    fs.readFile("./public/script2.js", "utf-8", (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
         res.end();
