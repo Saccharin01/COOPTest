@@ -65,8 +65,8 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "image/jpg" });
       res.end(data);
     });
-  }else if (req.url === "/index2.html") {
-    fs.readFile("./public/html/index2.html", "utf-8", (err, data) => {
+  }else if (req.url === "/welcomePage.html") {
+    fs.readFile("./public/html/welcomePage.html", "utf-8", (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
         res.end();
@@ -75,8 +75,8 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "text/html" });
       res.end(data);
     });
-  } else if (req.url === "/style2.css") {
-    fs.readFile("./public/html/style2.css", "utf-8", (err, data) => {
+  } else if (req.url === "/welcomePage.css") {
+    fs.readFile("./public/html/welcomePage.css", "utf-8", (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
         res.end();
