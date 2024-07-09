@@ -55,7 +55,17 @@ const server = http.createServer((req, res) => {
       res.end(data);
     });
     // 추가 한 부분
-  } else if (req.url === "/index2.html") {
+  } else if (req.url === "/background.jpg") {
+    fs.readFile("./public/html/background.jpg", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        res.end();
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "image/jpg" });
+      res.end(data);
+    });
+  }else if (req.url === "/index2.html") {
     fs.readFile("./public/html/index2.html", "utf-8", (err, data) => {
       if (err) {
         res.writeHead(500, { "Content-Type": "text/plain" });
