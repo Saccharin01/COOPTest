@@ -55,7 +55,47 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { "Content-Type": "image/jpg" });
       res.end(data);
     });
-  } else if (req.method === 'POST') {
+  } else if (req.url === "/background.jpg") {
+    fs.readFile("./public/html/background.jpg", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        res.end();
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "image/jpg" });
+      res.end(data);
+    });
+  }else if (req.url === "/welcomePage.html") {
+    fs.readFile("./public/html/welcomePage.html", "utf-8", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        res.end();
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "text/html" });
+      res.end(data);
+    });
+  } else if (req.url === "/welcomePage.css") {
+    fs.readFile("./public/html/welcomePage.css", "utf-8", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        res.end();
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "text/css" });
+      res.end(data);
+    });
+  } else if (req.url === "/script2.js") {
+    fs.readFile("./public/script2.js", "utf-8", (err, data) => {
+      if (err) {
+        res.writeHead(500, { "Content-Type": "text/plain" });
+        res.end();
+        return;
+      }
+      res.writeHead(200, { "Content-Type": "application/Javascript" });
+      res.end(data);
+    });
+  }else if (req.method === 'POST') {
     if (req.url === '/form-action') {
       let body = '';
       req.on('data', chunk => {
@@ -110,7 +150,8 @@ const server = http.createServer((req, res) => {
   } else {
     res.writeHead(404, { "Content-Type": "text/plain" });
     res.end("404 Not Found");
-  }
+    // 추가 한 부분
+  } 
 });
 
 const PORT = 8080;
