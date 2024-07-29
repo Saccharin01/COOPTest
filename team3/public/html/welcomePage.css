@@ -49,8 +49,8 @@ height: 40px;
 background-color: rgb(138, 138, 138);
 }
 .innerLoading {
-width: 10vw;
+width: 0vw;
 height: 40px;
 background-color: green;
-/* transition: width 0.1s ease-out; */
+transition: width 0.1s ease-out;
 }
